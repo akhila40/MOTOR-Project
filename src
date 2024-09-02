@@ -1,0 +1,33 @@
+// Motor class to simulate motor behavior
+class Motor {
+    constructor() {
+        this.running = false;
+    }
+ start() {
+        this.running = true;
+    }
+
+    stop() {
+        this.running = false;
+    }
+}
+
+// Test function to check motor status
+function testMotorStatus(motor) {
+    if (motor.running) {
+        console.log('Motor status: RUNNING');
+    } else {
+        console.log('Motor status: Stopped');
+    }
+}
+
+// Create an instance of the Motor class
+const myMotor = new Motor();
+
+// Start the motor
+myMotor.start();
+testMotorStatus(myMotor);
+
+// Stop the motor
+myMotor.stop();
+testMotorStatus(myMotor);
